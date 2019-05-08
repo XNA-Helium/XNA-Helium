@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed",
+    "ClosedDate": "2008-11-13T08:39:35.663-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Using change set 24976, I can start the game, select the number of players and select the terrain all splendidly. However, once I click \"Start\" after picking my terrain, I get an Out of Memory exception. Here is the error message:\n \nAn unhandled exception of type 'System.OutOfMemoryException' occurred in Microsoft.Xna.Framework.dll\n \nAdditional information: OutOfMemoryException\n \nThis happens in Terrain's constructor, when the code reaches the line \"BackgroundLeft.GetData<Color>(colordata);\" This is line 185 of Terrain.cs.",
+    "LastUpdatedDate": "2013-05-14T00:25:31.78-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "Name",
+    "ReportedDate": "2008-10-15T17:25:15.077-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Out of Memory",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6439
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

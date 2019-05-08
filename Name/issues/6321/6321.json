@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed, probably the out of memory issue",
+    "ClosedDate": "2008-11-13T08:40:20.693-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I can start the game and select how many players, then select the AI then select the map but after that it restarts my zune. i dont know whats going wrong i have tried putting it on my zune a couple of times. Can someone help me help me my e-mail is ice7417@yahoo.com. thanks",
+    "LastUpdatedDate": "2013-05-14T00:25:32.413-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "Name",
+    "ReportedDate": "2008-09-30T16:18:38.293-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "problems",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6321
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "Id": "0",
+    "Name": "Release 2.0",
+    "DevelopmentStatus": "Stable",
+    "Description": "The 2.0 Release of Name. \n\nBad News:\nThis release is missing Netcode as I have not yet gotten it completely working under XNA 3.0 final.\nStill no sounds, or music controls (but they are coming and some of the sounds are done).\n\nGood News:\nThis release runs in less memory than previous releases.\nThis release runs faster (upto 2x as fast)!\nEasier to aim.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-11-13T08:33:56.81-08:00",
+    "Files": [
+      {
+        "Id": "649dcb60-d9ac-449e-b2e1-4986a0641677",
+        "FileName": "Name.ccgame",
+        "Url": "./0/649dcb60-d9ac-449e-b2e1-4986a0641677",
+        "Type": "Application",
+        "UploadDate": "2008-11-13T08:33:56.42-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "1",
+    "Name": "Release 1.2 Polish and Bugfix release",
+    "DevelopmentStatus": "None",
+    "Description": "Code: Some bug fixes, \nRestarting the game should work now. \nLevel Selection screen. Previously played level screen (available after you have played 2 games). \n\nArt: Images for the new menus. \n\nCode for the new weapons is in but COMPLETELY un-tested, also don't have artwork for them so I can't test them. \nNew Weapons are not Selectable in the weapon selection screen yet. ",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-06-27T07:22:34.597-07:00",
+    "Files": [
+      {
+        "Id": "a2a834dd-4caf-47bc-8d75-6a88ffa63ca1",
+        "FileName": "Name-20580.zip",
+        "Url": "./1/a2a834dd-4caf-47bc-8d75-6a88ffa63ca1",
+        "Type": "Source Code",
+        "UploadDate": "2008-06-27T07:20:38.817-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "2",
+    "Name": "Release 1.1 for ALL Zunes with Basic AI",
+    "DevelopmentStatus": "None",
+    "Description": "New Version Available \n\nIt has:\n Zune 30 support.\n a basic AI (1 player is always AI, so 2 players is now 1 human + 1 ai, 3 is now 2 human + 1 ai, 4 is now 3 human + 1 ai.).\n a way to end your turn (hit back to end your turn if your not shooting), you now hold back to quit.\n\nThere is a small bug, every once in a while the AI ends up aiming the wrong way and nukes its self. ",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-05-27T13:48:15.197-07:00",
+    "Files": [
+      {
+        "Id": "a97c38b6-85f1-4e7c-86a4-d706b9309df6",
+        "FileName": "Name-19252.zip",
+        "Url": "./2/a97c38b6-85f1-4e7c-86a4-d706b9309df6",
+        "Type": "Source Code",
+        "UploadDate": "2008-05-27T13:47:43.103-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "3",
+    "Name": "Name 1.0 For XNA 3.0 CTP",
+    "DevelopmentStatus": "None",
+    "Description": "Since for the CTP you have to build it yourself to deploy to the Zune and I can't just pass around an executable there is no point in Adding files to this. \n\nGrab the source and Enjoy!",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-05-21T15:25:01.203-07:00",
+    "Files": []
+  },
+  {
+    "Id": "4",
+    "Name": "Release 1.0b for XNA 3.0 CTP",
+    "DevelopmentStatus": "None",
+    "Description": "This time with a zip file to be less confusing.\n\nThis is the sourcecode ( C# ), you'll need visual studio 2008 and the XNA 3.0 CTP",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-05-21T20:02:02.707-07:00",
+    "Files": [
+      {
+        "Id": "ef52d406-f872-4526-9dda-1129f4c7f7c5",
+        "FileName": "Name.zip",
+        "Url": "./4/ef52d406-f872-4526-9dda-1129f4c7f7c5",
+        "Type": "Source Code",
+        "UploadDate": "2008-05-21T20:02:02.723-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "5",
+    "Name": "Release 2.1 for XNA 3.0 Zune Firmware 3.1",
+    "DevelopmentStatus": "Beta",
+    "Description": "Updated to 3.1, No more ram problems. \n\nThis is slower (due to the 240 sprites of dimensions 1x700 drawn for the terrain). Deformable Terrain is now a possibility,\n\nIt \"feels\" slower than before, some animations may need to be sped up. \n\nIts time for feedback. What do you want? \n\n",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-12-01T09:46:44.233-08:00",
+    "Files": [
+      {
+        "Id": "218ae495-1fcf-4a8c-b22c-64e56212aef0",
+        "FileName": "Name.ccgame",
+        "Url": "./5/218ae495-1fcf-4a8c-b22c-64e56212aef0",
+        "Type": "Application",
+        "UploadDate": "2008-12-01T09:46:43.937-08:00"
+      }
+    ]
+  }
+]

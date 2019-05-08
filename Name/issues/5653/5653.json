@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "New AI should solve this problem.",
+    "ClosedDate": "2008-11-13T08:40:54.787-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "AI doesn't reconize Napalm and kills itself walking through it.",
+    "LastUpdatedDate": "2013-05-14T00:25:32.6-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "Name",
+    "ReportedDate": "2008-07-25T17:18:27.973-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "AI and Napalm",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 5653
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "We are working on this, however complicated AI is A LOT of work, so better AI will be atleast a month. If your a programmer feel free to break open the AI manager and try your hand at it.",
+      "PostedDate": "2008-07-31T12:29:15.513-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-07-31T12:29:37.34-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-07-31T12:29:54.747-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-09-30T16:23:42.433-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-11-13T08:40:54.787-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-01T22:53:43.96-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-14T00:25:32.6-07:00",
+      "Id": -2147483648
+    }
+  ]
+}
