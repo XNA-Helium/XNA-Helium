@@ -1,0 +1,116 @@
+# Helium Getting Started Tutorial
+
+
+The Helium XNA game engine is a lightweight portable game engine that is meant to be easy to use, quick to implement and port games. In this tutorial I'll show how to setup a helium game project include its libraries make a menu and a button.
+
+## +Linking up the Helium Engine to an empty game project+
+
+First create an empty 4.0 XNA game project. The next step is to include the needed project files in your solution. Right click on your solution in the solution explorer and click add->add existing project find the Engine Win32 project file and add it you will also need to add the EngineContentPipelineExtension project as well, Its in the PipelineExtensions folder inside Engine. After that you need to the SharedContent that Helium uses for core and default content. Do the same as before and add the SharedContent project file. Now that the projects are in your solution you must attach the projects as references in your game project. Go into your game project and right click on references. Click Add Reference, if you are not already in the projects tab, move to it. Then select the Engine Win32 Project and press OK. Next you need to add the SharedContent project as a content reference, this is done by right clicking on the Content references folder in your game project and selecting Add Content Reference select SharedContent from the list and press OK the EngineContentPipelineExtension does not need to be added.
+
+## +Setting up the EngineGame+
+
+XNA should have generated a Game1.cs file for you. Open that file and add 'using Engine;' and 'using Engine.Core' to the top of the file. Scroll down to where the Game1 class is defined. Right now it uses the stock 'game' object but helium handles a lot of the 'game' object management for us so we need to change Microsoft.Xna.Framework.Game to EngineGame. XNA has done a lot of things we don't need for a Helium game in the Game1.cs file. Go thru and delete all the varaibles and functions defined by default for the class. Your Game1.cs file should look like this now.
+
+{code:c#}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Media;
+
+using Engine;
+using Engine.Core;
+
+namespace YourGame
+{
+    /// <summary>
+    /// This is the main type for your game
+    /// </summary>
+    public class Game1 : EngineGame
+    {
+    }
+}
+{code:c#}
+
+Helium requires that the game class implements the FirstMenu function. This function is used to determine what menu should be created right at the execution of the game. So add the override for this function we will come back to it later after we have a menu class created for it. The FirstMenu function should look something like this for now.
+
+{code:c#}
+        protected override Engine.UI.BaseMenu FirstMenu()
+        {
+        }
+{code:c#}
+
+You will likely want to load some content at the execution of your application for the background of your menu. Helium has a content manage system that will help in the loading and streaming of file loaded content and dynamically generated content. At the execution of the game the LoadGameContent function will be called in EngineGame to do any initial content loading or generating, simply override this function and use the Engine.ContentManager to load your content. Here is an example of how to load a texture file.
+
+{code:c#}
+        protected override void LoadGameContent()
+        {
+            Engine.ContentManager.Instance.Load<Texture2D>(@"Content\Background");
+        }
+{code:c#}
+
+Now that your texture is loaded into the content manager it is accessible anywhere in your game project.
+
+# +How to make a basic menu+
+
+Right now your game project wont build. You have to return a valid menu that implements the BaseMenu in some way, so need to make a menu for it. For now we will make a very simple menu with just a background and a single 'start' button that does nothing.
+
+Create an image to use as a background the dimensions for this should be 480x800 which is the default size of a Helium game and then load it in the LoadGameContent function with the Engine.ContentManager, you will also need to add the image to your content project that was created for this game project. If you wish the change the resolution that Helium runs at, you can simple override the predefined back buffer size at the construction of the Game1 object. like so.
+
+{code:c#}
+        public Game1()
+            : base()
+        {
+            graphics.PreferredBackBufferWidth = 1024;
+            graphics.PreferredBackBufferHeight = 768;
+        }
+{code:c#}
+
+Start off by creating a new cs file. Right click on your game project and click add->new item. Rename the file FirstMenu.cs and hit Add. Now we have an empty class file ready to be turned into a BaseMenu object. Next we will add the Engine and Engine.UI to the using list at the top. Then we need make this FirstMenu implement UIBaseMenu, UIBaseMenu is an implementation of the BaseMenu that also contains some useful things such as input callbacks and a predefined background.
+
+To have a default background for your menu you can use the UIBaseMenu constructor that sets the background, you also need to define where this menus top left corner is, in this case the top left corner will be {0,0} so that the menu covers the whole screen.
+
+{code:c#}
+    public class FirstMenu : UIBaseMenu
+    {
+        public FirstMenu()
+            : base(@"Content\Background", new Point(0, 0))
+        {
+        }
+    }
+{code:c#}
+
+You now have a Menu object that is ready to be added to the FirstMenu function in the EngineGame function override in your Game1 class. Go ahead and add there before continuing on.
+
+{code:c#}
+        protected override Engine.UI.BaseMenu FirstMenu()
+        {
+                return new FirstMenu();
+        }
+{code:c#}
+
+Now your game should compile and execute and show you just the background image you set as the background of your menu. Now its time to add a button to that menu so you can see something other then just a flat image. 
+
+Start by creating a UITextButton object at the construction of the menu. The UITextButton is a simple text based button that uses the button graphic from the SharedContent project. To create a UITextButton you must first construct the UITextButton, set the text for the button and the position of the button in its construction, In the example below I use the CameraManager to calculate a position on the screen based on the size of the screens percentages. That puts the button centered on the width but slightly near the top on the height. I also change the buttons ValidStates to TouchStates.Released this makes the button not do anything unless the user releases there finger (or mouse in the case of windows) from the button. Below that I call the Add function this adds the button to the menu and makes it receive updates input and draws from the MenuSystem. The first parameter in Add is a function pointer to a function that will be called when the button is pressed. The second parameter is the button itself.
+
+{code:c#}
+        public MainMenu()
+            : base(@"Content\MainMenuBackground", new Point(0, 0))
+        {
+            UITextButton button = new UITextButton("Start", CameraManager.GetPosition(0.025f, 0.25f));
+            button.ValidStates = (int)TouchStates.Released;
+            Add(Start, button);
+        }
+
+        protected void Start()
+        {
+        }
+{code:c#}
+
+Build your project and execute it. You should now see the button you have created on the screen. If you press it a highlight graphic shows behind the button. When released while over the button the function pointer Start is called and other tasks can be preformed.

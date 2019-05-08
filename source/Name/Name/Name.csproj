@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{9DED64DD-C97E-4162-85B4-9B334A030990}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Windows Phone</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Name</RootNamespace>
+    <AssemblyName>Name</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows Phone</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>2c0a54c1-9a32-4765-8a0a-c9dd328bf889</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <XapFilename>$(AssemblyName).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <XnaWindowsPhoneManifestTemplate>Properties\WindowsPhoneManifest.xml</XnaWindowsPhoneManifestTemplate>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <GameStartupType>Name.NameGame</GameStartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows Phone\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows Phone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows Phone\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DrawLayer.cs" />
+    <Compile Include="Components\FacingAwareOffsetManager.cs" />
+    <Compile Include="Components\ProjectileHolder.cs" />
+    <Compile Include="Components\Team.cs" />
+    <Compile Include="Components\WeaponHolder.cs" />
+    <Compile Include="GameObjects\Explosions\DefaultExplosion.cs" />
+    <Compile Include="GameObjects\Explosions\FlameExplosion.cs" />
+    <Compile Include="GameObjects\Explosions\LargeExplosion.cs" />
+    <Compile Include="GameObjects\Explosions\MineExplosion.cs" />
+    <Compile Include="GameObjects\Explosions\Napalm.cs" />
+    <Compile Include="GameObjects\Explosions\SmallExplosion.cs" />
+    <Compile Include="GameObjects\Explosions\WeaponExplosion.cs" />
+    <Compile Include="GameObjects\IExplosion.cs" />
+    <Compile Include="GameObjects\IProjectile.cs" />
+    <Compile Include="GameObjects\Items\HealthPack.cs" />
+    <Compile Include="GameObjects\Items\JetPack.cs" />
+    <Compile Include="GameObjects\IWeapon.cs" />
+    <Compile Include="GameObjects\Player\PlayerHitPointsDisplay.cs" />
+    <Compile Include="GameObjects\Player\PlayerLaunchingRod.cs" />
+    <Compile Include="GameObjects\Player\PlayerObject.cs" />
+    <Compile Include="GameObjects\Projectiles\CarpetBomb.cs" />
+    <Compile Include="GameObjects\Projectiles\CarpetBombSingle.cs" />
+    <Compile Include="GameObjects\Projectiles\Flame.cs" />
+    <Compile Include="GameObjects\Projectiles\Grenade.cs" />
+    <Compile Include="GameObjects\Projectiles\GrenadeCluster.cs" />
+    <Compile Include="GameObjects\Projectiles\GrenadeSingle.cs" />
+    <Compile Include="GameObjects\Projectiles\LandMine.cs" />
+    <Compile Include="GameObjects\Projectiles\ProjectileObject.cs" />
+    <Compile Include="GameObjects\Projectiles\Rocket.cs" />
+    <Compile Include="GameObjects\Projectiles\SpiderMine.cs" />
+    <Compile Include="GameObjects\Weapons\CarpetBombLauncher.cs" />
+    <Compile Include="GameObjects\Weapons\ClusterLauncher.cs" />
+    <Compile Include="GameObjects\Weapons\FlameThrower.cs" />
+    <Compile Include="GameObjects\Weapons\GrenadeLauncher.cs" />
+    <Compile Include="GameObjects\Weapons\LandMineLauncher.cs" />
+    <Compile Include="GameObjects\Weapons\RocketLauncher.cs" />
+    <Compile Include="GameObjects\Weapons\SpiderMineLauncher.cs" />
+    <Compile Include="GameObjects\Weapons\WeaponObject.cs" />
+    <Compile Include="GameOptions.cs" />
+    <Compile Include="GameState\AvailableWeaponList.cs" />
+    <Compile Include="GameState\BaseAIFSM.cs" />
+    <Compile Include="GameState\NameTeam.cs" />
+    <Compile Include="GameState\Physic2DManagerWithTerrain.cs" />
+    <Compile Include="GameState\PlayingState.cs" />
+    <Compile Include="GameState\SmarterAIFSM.cs" />
+    <Compile Include="GameState\SmartestAIFSM.cs" />
+    <Compile Include="GameState\Terrain.cs" />
+    <Compile Include="Menus\AimAndShootMenu.cs" />
+    <Compile Include="Menus\AIPlayersMenu.cs" />
+    <Compile Include="Menus\AITeamMenu.cs" />
+    <Compile Include="Menus\GameOptionsMenu.cs" />
+    <Compile Include="Menus\PreviouslyPlayedLevelSelectionMenu.cs" />
+    <Compile Include="Menus\CreditsMenu.cs" />
+    <Compile Include="Menus\GameOverMenu.cs" />
+    <Compile Include="Menus\GamePlayMenu.cs" />
+    <Compile Include="Menus\HumanPlayersMenu.cs" />
+    <Compile Include="Menus\JetpackMenu.cs" />
+    <Compile Include="Menus\LevelSelectionMenu.cs" />
+    <Compile Include="Menus\LocalGameMenu.cs" />
+    <Compile Include="Menus\MainMenu.cs" />
+    <Compile Include="Menus\OptionsMenu.cs" />
+    <Compile Include="Menus\ProjectileTracker.cs" />
+    <Compile Include="Menus\SharedGamePlayMenu.cs" />
+    <Compile Include="Menus\TimeDisplay.cs" />
+    <Compile Include="Menus\Tracker.cs" />
+    <Compile Include="Menus\WeaponSelectionMenu.cs" />
+    <Compile Include="NameGame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WindowsPhoneManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameThumbnail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LevelList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\Engine.csproj">
+      <Project>{4CA53494-F54E-4031-9D67-B42F5D31BED5}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SharedContent\SharedContent.contentproj">
+      <Project>{AA7A7E68-0572-4076-8553-DA0C8B36E23C}</Project>
+      <Name>SharedContent</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+    <ProjectReference Include="..\NameContent\NameContent.contentproj">
+      <Project>{494B251E-6ACB-4C38-AB26-6AD40AC53AFE}</Project>
+      <Name>NameContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
